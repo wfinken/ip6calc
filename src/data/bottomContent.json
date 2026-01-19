@@ -1,0 +1,42 @@
+{
+    "faq": [
+        {
+            "question": "Why do we need IPv6?",
+            "answer": "The previous system, IPv4, only had 4.3 billion addresses, which we ran out of in 2011. IPv6 provides 340 undecillion addresses (that's 340 followed by 36 zeros), ensuring we can connect every device on Earth—and other planets—forever."
+        },
+        {
+            "question": "What is a /64?",
+            "answer": "A /64 is the standard size for a single network segment, like your home Wi-Fi. It creates 18 quintillion addresses just for your house. This might seem like overkill, but it allows for features like automatic configuration and better security without needing complex router settings."
+        },
+        {
+            "question": "Is IPv6 faster?",
+            "answer": "In many cases, yes. IPv6 was designed to be processed more efficiently by routers. It effectively eliminates the need for NAT (Network Address Translation), which is a common slowdown on IPv4 networks. Major content providers like Facebook and Google report that IPv6 is consistently faster for mobile users."
+        },
+        {
+            "question": "Is my old equipment compatible?",
+            "answer": "Most modern routers, computers, and phones support IPv6 automatically. However, some very old networking gear might not. You can usually check your connection type in your device's network settings."
+        }
+    ],
+    "sources": [
+        {
+            "title": "RFC 8200: IPv6 Specification",
+            "url": "https://datatracker.ietf.org/doc/html/rfc8200",
+            "description": "The official standard definition of the Internet Protocol, Version 6."
+        },
+        {
+            "title": "RFC 4291: Addressing Architecture",
+            "url": "https://datatracker.ietf.org/doc/html/rfc4291",
+            "description": "Defines how IPv6 addresses are structured and categorized."
+        },
+        {
+            "title": "IANA IPv6 Registry",
+            "url": "https://www.iana.org/assignments/ipv6-address-space/ipv6-address-space.xhtml",
+            "description": "The official registry showing which blocks of IPv6 addresses are assigned to which regions."
+        },
+        {
+            "title": "Google IPv6 Statistics",
+            "url": "https://www.google.com/intl/en/ipv6/statistics.html",
+            "description": "Real-time data on IPv6 adoption worldwide."
+        }
+    ]
+}

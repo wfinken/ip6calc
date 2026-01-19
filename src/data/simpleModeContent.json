@@ -1,0 +1,57 @@
+{
+    "ipv6_what_is": {
+        "title": "What is IPv6?",
+        "simple_explanation": "It's the modern upgrade to the internet's addressing system. The old system (IPv4) ran out of space years ago. IPv6 fixes this by providing a practically infinite number of addresses, better security features built-in, and smoother connections for mobile devices.",
+        "metaphor": "Imagine if the entire world had to share a single phone book with only 4 billion pages. That's IPv4. IPv6 is like giving every single grain of sand on Earth its own unique phone number."
+    },
+    "compression": {
+        "title": "The Double Colon (::)",
+        "simple_explanation": "IPv6 addresses are naturally very long (32 numbers!). Because they often contain long strings of zeros, we use a '::' as a shortcut to say 'fill this empty space with zeros'. It keeps things tidy.",
+        "metaphor": "It's like writing '1...100' instead of writing every number from 1 to 100. Everyone knows what's missing in the middle."
+    },
+    "prefix": {
+        "title": "The Network Prefix (e.g., /64)",
+        "simple_explanation": "This number splits the address into two parts: the 'Neighborhood' (Network) and the 'House' (Interface). A /64 is the standard standard size for a single local network (like your home Wi-Fi).",
+        "metaphor": "Think of it like a street address: The first part is the Street Name (Network), and the last part is the House Number (Interface). The /64 just tells the mailman where to stop reading the street name and look for the house."
+    },
+    "address_type_global_unicast": {
+        "title": "Global Unicast Address",
+        "simple_explanation": "A Public Internet Address. This address is globally unique and can route data anywhere on the internet. If you have this, you are 'live' to the world.",
+        "metaphor": "This is your home's official mailing address. A letter sent from halfway across the world will arrive right at your doorstep."
+    },
+    "address_type_link_local": {
+        "title": "Link-Local Address (fe80::)",
+        "simple_explanation": "A Local-Only Address. Every IPv6 device creates one of these automatically to talk to neighbors on the same wire or Wi-Fi. It cannot go onto the wider internet.",
+        "metaphor": "Like shouting across a room. People in the same room (network) can hear you perfectly, but someone in the next building (internet) has no idea you're essentially speaking."
+    },
+    "address_type_loopback": {
+        "title": "Loopback Address (::1)",
+        "simple_explanation": "The 'Self' Address. This is used by the computer to send messages to itself for testing or internal communication.",
+        "metaphor": "It's like looking in a mirror or calling your own phone number to check if it rings."
+    },
+    "scale": {
+        "title": "The Infinite Scale",
+        "simple_explanation": "IPv6 is 128-bit, while IPv4 is 32-bit. This isn't just 4 times bigger; it's exponentially massive. We will effectively never run out of addresses again.",
+        "metaphor": "If the entire IPv4 internet was the size of a golf ball, the IPv6 internet would be the size of the sun. It's a scale so large it's hard to even imagine."
+    },
+    "canonical_form": {
+        "title": "Canonical (Short) Form",
+        "simple_explanation": "This is the 'clean' version of the address. We remove leading zeros and use the '::' shortcut to make it easier to read and type.",
+        "metaphor": "It's like writing '5 dollars' instead of '005.00 dollars'. Same value, just less clutter."
+    },
+    "expanded_form": {
+        "title": "Expanded (Full) Form",
+        "simple_explanation": "This shows every single bit of the address explicitly. It's useful for computers and engineers to see exactly what's going on, but it's too long for daily use.",
+        "metaphor": "Like reading a contract's fine print. It contains every detail, but you usually just want the summary."
+    },
+    "network_range": {
+        "title": "Network Range",
+        "simple_explanation": "This defines the boundaries of your specific slice of the internet. It shows the very first and very last address available to you.",
+        "metaphor": "It's like owning a plot of land. The range defines the cornerstones of your property line."
+    },
+    "total_hosts": {
+        "title": "Total Addresses",
+        "simple_explanation": "This is the number of unique device addresses available in your network. Even a small home network has more addresses than there are stars in the galaxy.",
+        "metaphor": "Imagine a stadium with 18 quintillion seats. You could give every person on Earth multiple stadiums of their own."
+    }
+}
