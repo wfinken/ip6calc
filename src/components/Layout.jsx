@@ -9,7 +9,7 @@ export function Layout({ children, headerExtra }) {
                         <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-pink-500 via-purple-500 to-violet-600 flex items-center justify-center font-bold text-white text-lg shadow-lg shadow-purple-500/30">
                             6
                         </div>
-                        <h1 className="text-xl font-bold bg-linear-to-r from-white to-purple-200 bg-clip-text text-transparent">
+                        <h1 className="text-xl font-bold text-gradient-title">
                             ip6calc
                         </h1>
                     </div>

@@ -20,26 +20,36 @@
 
   --text-primary: #ffffff;
   --text-secondary: #a8adc6;
-  --text-muted: #6b7194;
-  --text-on-accent: #ffffff;
+  --text-muted: #94a3b8;
+  /* Slate 400 - Contrast 7.5:1 */
+  --text-on-accent: #0f172a;
+  /* Slate 900 - Dark text for light accents */
 
   --border-color: rgba(99, 102, 145, 0.25);
   --border-glow: rgba(139, 92, 246, 0.3);
 
-  /* Accent colors - Vibrant */
-  --accent-color: #8b5cf6;
-  --accent-glow: rgba(139, 92, 246, 0.5);
-  --accent-pink: #f472b6;
-  --accent-magenta: #ec4899;
-  --accent-cyan: #22d3ee;
-  --accent-orange: #fb923c;
-  --accent-green: #4ade80;
-  --accent-blue: #3b82f6;
+  /* Accent colors - Pastel/Bright for Dark Mode (AAA against dark bg) */
+  --accent-color: #a78bfa;
+  /* Violet 400 */
+  --accent-glow: rgba(167, 139, 250, 0.5);
+  --accent-pink: #f9a8d4;
+  /* Pink 300 */
+  --accent-magenta: #f472b6;
+  /* Pink 400 */
+  --accent-cyan: #67e8f9;
+  /* Cyan 300 */
+  --accent-orange: #fdba74;
+  /* Orange 300 */
+  --accent-green: #86efac;
+  /* Green 300 */
+  --accent-blue: #93c5fd;
+  /* Blue 300 */
 
   /* Gradients */
   --gradient-pink: linear-gradient(135deg, #ec4899 0%, #f472b6 50%, #fb7185 100%);
   --gradient-purple: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
   --gradient-card: linear-gradient(180deg, rgba(30, 32, 54, 0.95) 0%, rgba(22, 24, 42, 0.98) 100%);
+  --gradient-title: linear-gradient(to right, #ffffff, #e9d5ff);
 
   color-scheme: dark;
   font-family: 'Inter', system-ui, -apple-system, sans-serif;
@@ -55,20 +65,20 @@
 
   --text-primary: #ffffff;
   --text-secondary: #a8adc6;
-  --text-muted: #6b7194;
-  --text-on-accent: #ffffff;
+  --text-muted: #94a3b8;
+  --text-on-accent: #0f172a;
 
   --border-color: rgba(99, 102, 145, 0.25);
   --border-glow: rgba(139, 92, 246, 0.3);
 
-  --accent-color: #8b5cf6;
-  --accent-glow: rgba(139, 92, 246, 0.5);
-  --accent-pink: #f472b6;
-  --accent-magenta: #ec4899;
-  --accent-cyan: #22d3ee;
-  --accent-orange: #fb923c;
-  --accent-green: #4ade80;
-  --accent-blue: #3b82f6;
+  --accent-color: #a78bfa;
+  --accent-glow: rgba(167, 139, 250, 0.5);
+  --accent-pink: #f9a8d4;
+  --accent-magenta: #f472b6;
+  --accent-cyan: #67e8f9;
+  --accent-orange: #fdba74;
+  --accent-green: #86efac;
+  --accent-blue: #93c5fd;
 
   color-scheme: dark;
 }
@@ -82,21 +92,33 @@
   --bg-element-solid: #f1f5f9;
 
   --text-primary: #0f172a;
-  --text-secondary: #475569;
-  --text-muted: #94a3b8;
+  --text-secondary: #334155;
+  --text-muted: #475569;
+  /* Slate 600 - Contrast 7.3:1 */
   --text-on-accent: #ffffff;
+  /* White text for dark accents */
 
   --border-color: rgba(148, 163, 184, 0.3);
-  --border-glow: rgba(124, 58, 237, 0.2);
+  --border-glow: rgba(109, 40, 217, 0.2);
 
-  --accent-color: #7c3aed;
-  --accent-glow: rgba(124, 58, 237, 0.3);
-  --accent-pink: #db2777;
+  /* Accent colors - Dark/Deep for Light Mode (AAA against white bg) */
+  --accent-color: #6d28d9;
+  /* Violet 700 */
+  --accent-glow: rgba(109, 40, 217, 0.3);
+  --accent-pink: #be185d;
+  /* Pink 700 */
   --accent-magenta: #be185d;
-  --accent-cyan: #0891b2;
-  --accent-orange: #ea580c;
-  --accent-green: #16a34a;
-  --accent-blue: #2563eb;
+  /* Pink 700 */
+  --accent-cyan: #0e7490;
+  /* Cyan 700 */
+  --accent-orange: #c2410c;
+  /* Orange 700 */
+  --accent-green: #15803d;
+  /* Green 700 */
+  --accent-blue: #1d4ed8;
+  /* Blue 700 */
+
+  --gradient-title: linear-gradient(to right, #7e22ce, #a855f7);
 
   color-scheme: light;
 }
@@ -126,6 +148,8 @@
   --accent-green: #00ff41;
   --accent-blue: #00ff41;
 
+  --gradient-title: linear-gradient(to right, #00ff41, #00ff41);
+
   color-scheme: dark;
 }
 
@@ -147,9 +171,9 @@ body {
 [data-theme='dark'] body,
 :root:not([data-theme]) body {
   background:
-    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(139, 92, 246, 0.15) 0%, transparent 50%),
-    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(236, 72, 153, 0.08) 0%, transparent 40%),
-    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(34, 211, 238, 0.05) 0%, transparent 40%),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(167, 139, 250, 0.15) 0%, transparent 50%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(249, 168, 212, 0.08) 0%, transparent 40%),
+    radial-gradient(ellipse 60% 40% at 0% 100%, rgba(103, 232, 249, 0.05) 0%, transparent 40%),
     var(--bg-main);
 }
 
@@ -289,7 +313,7 @@ body {
 /* Primary accent button */
 .btn-accent {
   background: linear-gradient(135deg, var(--accent-magenta) 0%, #a855f7 100%);
-  color: white;
+  color: var(--text-on-accent);
   font-weight: 600;
   box-shadow:
     0 4px 20px rgba(236, 72, 153, 0.35),
@@ -583,6 +607,14 @@ body {
 
 .text-gradient-purple {
   background: linear-gradient(135deg, #8b5cf6 0%, #a78bfa 100%);
+  -webkit-background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gradient-title {
+  background: var(--gradient-title);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;

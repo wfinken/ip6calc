@@ -7,13 +7,14 @@ import { InfoPanel } from './components/InfoPanel';
 import { IPv6Address, IPv6Subnet } from './utils/ipv6';
 import { SimpleModeCard } from './components/SimpleModeCard';
 import { SimpleModeToggle } from './components/SimpleModeToggle';
-import { ThreeBitExplorer } from './components/ThreeBitExplorer';
+
 import { TransitionTools } from './components/TransitionTools';
 import { ConfigGenerator } from './components/ConfigGenerator';
 import { BulkGenerator } from './components/BulkGenerator';
 import { EUI64Visualizer } from './components/EUI64Visualizer';
 import { SubnetTree } from './components/SubnetTree';
 import { SidebarGallery } from './components/SidebarGallery';
+import { IPv6HeaderVisualizer } from './components/IPv6HeaderVisualizer';
 import SIMPLE_MODE_DATA from './data/simpleModeContent.json';
 import { BottomContent } from './components/BottomContent';
 import bottomData from './data/bottomContent.json';
@@ -21,7 +22,7 @@ import bottomData from './data/bottomContent.json';
 function App() {
   const [address, setAddress] = useState('2001:db8::1');
   const [cidr, setCidr] = useState(64);
-  const [viewMode, setViewMode] = useState('2D');
+
   const [error, setError] = useState(null);
   const [parsedAddress, setParsedAddress] = useState(null);
   const [subnet, setSubnet] = useState(null);
@@ -93,9 +94,7 @@ function App() {
       </div>
     }>
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
-        <div className="lg:col-span-5 space-y-8">
-          <FavoritesPanel currentAddress={address} currentCidr={cidr} />
-
+        <div className="lg:col-span-12">
           <section className="glass-card rounded-2xl p-6 shadow-xl">
 
             <h2 className="text-xl font-bold mb-6 text-primary flex items-center gap-3">
@@ -111,6 +110,11 @@ function App() {
               type={parsedAddress?.type}
             />
           </section>
+        </div>
+        <div className="lg:col-span-5 space-y-8">
+          <FavoritesPanel currentAddress={address} currentCidr={cidr} />
+
+
 
           <ConfigGenerator address={address} cidr={cidr} />
           <BulkGenerator startAddress={address} cidr={cidr} />
@@ -141,27 +145,9 @@ function App() {
                 simpleTypeContent={getSimpleTypeContent(parsedAddress.type)}
               />
 
-              <div className="bg-main/50 p-1 rounded-xl flex items-center justify-between mb-2">
-                <h3 className="text-primary font-medium px-4">Address Visualizer</h3>
-                <button
-                  onClick={() => setViewMode(prev => prev === '2D' ? '3D' : '2D')}
-                  className={`
-                      px-4 py-2 rounded-lg text-sm font-bold transition-all duration-300
-                      ${viewMode === '3D'
-                      ? 'bg-accent text-accent-text-contrast shadow-lg shadow-accent/25'
-                      : 'bg-card text-muted hover:text-primary hover:bg-element'}
-                    `}
-                >
-                  {viewMode === '2D' ? 'Enter Spatial Mode' : 'Back to 2D View'}
-                </button>
-              </div>
-
-              {viewMode === '2D' ? (
-                <BitExplorer ipv6={parsedAddress} cidr={cidr} />
-              ) : (
-                <ThreeBitExplorer ipv6={parsedAddress} cidr={cidr} />
-              )}
-              <EUI64Visualizer />
+              <BitExplorer ipv6={parsedAddress} cidr={cidr} />
+              <EUI64Visualizer isSimpleMode={isSimpleMode} simpleData={SIMPLE_MODE_DATA} />
+              <IPv6HeaderVisualizer simpleData={SIMPLE_MODE_DATA} />
 
             </section>
           ) : (

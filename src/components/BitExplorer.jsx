@@ -16,11 +16,11 @@ export function BitExplorer({ ipv6, cidr }) {
 
             <div className="mb-4 flex items-center gap-4 text-sm">
                 <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-accent"></span>
+                    <span className="w-4 h-4 rounded bg-gradient-to-br from-purple-600/80 to-violet-600/60 border border-purple-500/40"></span>
                     <span className="text-secondary">Network Bits (/{cidr})</span>
                 </div>
                 <div className="flex items-center gap-2">
-                    <span className="w-3 h-3 rounded-full bg-muted"></span>
+                    <span className="w-4 h-4 rounded bg-element/50 border border-element/50"></span>
                     <span className="text-secondary">Host Bits</span>
                 </div>
             </div>

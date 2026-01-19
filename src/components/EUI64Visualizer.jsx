@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
+import { SimpleModeCard } from './SimpleModeCard';
 
-export function EUI64Visualizer() {
+export function EUI64Visualizer({ isSimpleMode, simpleData }) {
     const [mac, setMac] = useState('00:0c:29:ab:cd:ef');
     const [step, setStep] = useState(0);
 
@@ -95,6 +96,12 @@ export function EUI64Visualizer() {
                 <span className="w-1 h-6 accent-bar-blue rounded-full"></span>
                 <span className="text-accent-blue">EUI-64 Visualizer</span>
             </h2>
+
+            {isSimpleMode && simpleData?.eui64_visualizer && (
+                <div className="mb-6 animate-fade-in">
+                    <SimpleModeCard content={simpleData.eui64_visualizer} />
+                </div>
+            )}
 
             <div className="mb-6">
                 <label className="block text-secondary text-sm font-medium mb-1">

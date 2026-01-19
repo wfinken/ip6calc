@@ -34,7 +34,7 @@ function HexChar({ char }) {
     return (
         <span className="relative group cursor-help hover:text-accent transition-colors">
             {char}
-            <span className="absolute bottom-full left-1/2 -translate-x-1/2 mb-2 px-2 py-1 bg-main text-accent text-xs rounded border border-element opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-10">
+            <span className="absolute top-full left-1/2 -translate-x-1/2 mt-2 px-2 py-1 bg-main text-accent text-xs rounded border border-element opacity-0 group-hover:opacity-100 pointer-events-none whitespace-nowrap z-50">
                 {binary}
             </span>
         </span>

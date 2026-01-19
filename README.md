@@ -12,7 +12,7 @@ A modern, feature-rich IPv6 network calculator built with React and Vite. Design
 
 ### Visualization Tools
 - **2D Bit Explorer** - Interactive visualization of all 128 bits with network/host highlighting
-- **3D Bit Explorer** - Immersive Three.js-powered 3D voxel grid representation of the address space
+
 - **Subnet Tree** - Visual hierarchy of subnet divisions and relationships
 - **EUI-64 Visualizer** - Understand MAC-to-IPv6 interface identifier conversion
 
@@ -31,7 +31,7 @@ A modern, feature-rich IPv6 network calculator built with React and Vite. Design
 - **React 19** - UI framework
 - **Vite 7** - Build tool and dev server
 - **Tailwind CSS 4** - Utility-first styling
-- **Three.js / React Three Fiber** - 3D visualizations
+
 - **Vitest** - Unit testing
 - **Cloudflare Workers** - Deployment platform
 
@@ -73,7 +73,7 @@ src/
 ├── components/
 │   ├── AddressDetails.jsx    # Address format display
 │   ├── BitExplorer.jsx       # 2D bit visualization
-│   ├── ThreeBitExplorer.jsx  # 3D bit visualization
+
 │   ├── SubnetTree.jsx        # Subnet hierarchy tree
 │   ├── EUI64Visualizer.jsx   # EUI-64 conversion display
 │   ├── ConfigGenerator.jsx   # Router config generator
